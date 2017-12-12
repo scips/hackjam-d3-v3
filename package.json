@@ -1,0 +1,51 @@
+{
+  "name": "hj-d3js-v3",
+  "version": "1.0.0",
+  "description": "HackJam on d3 v3",
+  "main": "index.js",
+  "author": "Hackages Team",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "prebuild": "rm -r build || true",
+    "format": "prettier --single-quote --bracket-spacing=false --write 'src/**/*.js'",
+    "precommit": "lint-staged",
+    "start:watch": "jest --watch",
+    "start": "jest",
+    "demo": "webpack-dev-server --config webpack.demo.js --colors --devtool cheap-module-inline-source-map --host=0.0.0.0",
+    "test": "jest ",
+    "test-watch": "jest --watch",
+    "build": "webpack --config webpack.lib.js -p --progress --devtool source-map"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write --single-quote --bracket-spacing=false",
+      "eslint --max-warnings 1",
+      "git add"
+    ]
+  },
+
+  "devDependencies": {
+    "@types/jest": "^21.1.5",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "d3": "3.5.17",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^2.30.1",
+    "husky": "^0.14.3",
+    "json-loader": "^0.5.7",
+    "lint-staged": "^4.3.0",
+    "prettier": "^1.7.4",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.3"
+  },
+  "dependencies": {
+    "babel-jest": "^21.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "jest": "^21.2.1"
+  }
+}

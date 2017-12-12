@@ -1,0 +1,51 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css');
+
+
+a {
+    color: #ff6e00;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    width: ;
+}
+
+
+
+h1, h2 {
+    text-align: center;
+    margin: 1.5rem auto 1rem;
+    font-family: 'Josefin Sans', Serif, serif;
+    font-weight: normal;
+    font-size: 3rem;
+    color: #aaa;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.infos {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.drop {
+    cursor: pointer;
+}
+
+
+/* Update*/
+
+text {
+    font: bold 48px monospace;
+}
+
+
+.color-block {
+    width:60px;
+    height: 60px;
+    float: left;
+    margin: 1px;
+}
