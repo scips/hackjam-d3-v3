@@ -25,32 +25,34 @@ const updateAndEnterTransition = d3.transition().duration(2000);
 /**
  * Select the element with demo-join-and-update-pattern id;
  */
-const container = null;
+export const container = d3.select('#demo-join-and-update-pattern');
 
-const width = 400;
-const height = 200;
+export const width = 400;
+export const height = 200;
 
 /**
  * From the container select the "svg", update his width and height, add the id = root
  */
-const svg = null;
+export const svg = container.select('svg').property('width', width).property('height', height);
 
 /**
  * Append to the svg a "g" element and add a "transform" attribute with
  * the following value : `translate(45,${height / 2})`
  */
-const g = null;
+export const g = svg.append('g').attr('transform', `translate(45,${height / 2})`);
+
+
 
 /**
  * Will be used to update the drawing based on the data received
  * @param inputs
  */
-const update = inputs => {
+export const update = inputs => {
   /**
    * From 'g' variable, select all 'text' elements and "join" each array element to each
    * element of the selection
    */
-  const text = null;
+  const text = g.selectAll('text').join();
   /**
    * Get the 'exit' selection, then
    * - apply the 'fill' style to 'red'
