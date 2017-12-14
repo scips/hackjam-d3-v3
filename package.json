@@ -7,7 +7,6 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "prebuild": "rm -r build || true",
     "format": "prettier --single-quote --bracket-spacing=false --write 'src/**/*.js'",
     "precommit": "lint-staged",
     "start:watch": "jest --watch",
