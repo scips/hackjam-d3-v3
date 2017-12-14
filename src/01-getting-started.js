@@ -18,3 +18,5 @@ export const getD3 = () => {
 export const functionThatReturnsFunction = (d3Object) => {
   return () =>  { return d3Object };
 }
+
+// export const ftraf = d3 => () => d3;
